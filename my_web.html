@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简介 - 现代风格</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            font-family: 'Nunito', sans-serif;
+            scroll-behavior: smooth;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.5s, transform 0.5s;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        #hero {
+            background: url('12.jpg') no-repeat center center/cover;
+            color: #fff;
+        }
+        .info {
+            background: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        footer {
+            background: #212121;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>个人简介</h1>
+    </header>
+    <section id="hero">
+        <h2>欢迎访问我的个人网页</h2>
+    </section>
+    <section class="info">
+        <h2>关于我</h2>
+        <p>嵌入式工程师，NLP专家。纽卡斯尔大学物联网与嵌入式系统硕士在读，本科毕业于西安电子科技大学通信工程专业。</p>
+    </section>
+    <footer>
+        <p>版权所有 © 2024</p>
+    </footer>
+    <script>
+        window.addEventListener('load', function() {
+            const elements = document.querySelectorAll('section');
+            elements.forEach(element => {
+                element.style.opacity = 1;
+                element.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
